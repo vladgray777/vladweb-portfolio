@@ -1,8 +1,38 @@
+import { Link } from "react-router";
 import GlitchText from "../utils/GlitchText";
 import Terminal from "./Terminal";
 
 export default // ─── Hero section ─────────────────────────────────────────────────────────────
-function Hero() {
+  function Hero() {
+
+  const buttons = [
+    {
+      label: "$ ./view_projects",
+      href: "#projects",
+      primary: true,
+      isRoute: false,
+    },
+    {
+      label: "$ cat resume.pdf",
+      href: "/resume",
+      primary: false,
+      isRoute: true,
+    },
+  ];
+
+  const buttonStyle = (primary: boolean) => ({
+    fontFamily: "monospace",
+    fontSize: "0.78rem",
+    padding: "10px 20px",
+    border: primary ? "1px solid #00ff41" : "1px solid #1f3a1f",
+    color: primary ? "#0a0e0a" : "#00b32c",
+    background: primary ? "#00ff41" : "transparent",
+    letterSpacing: "0.08em",
+    textDecoration: "none",
+    transition: "all 0.2s",
+    cursor: "pointer",
+  });
+
   return (
     <section
       id="about"
@@ -52,41 +82,25 @@ function Hero() {
       <Terminal />
 
       <div className="flex gap-4 mt-10 flex-wrap justify-center fade-in">
-        {[
-          { label: "$ ./view_projects", href: "#projects", primary: true },
-          { label: "$ cat resume.pdf", href: "#contact", primary: false },
-        ].map((btn) => (
-          <a
-            key={btn.label}
-            href={btn.href}
-            style={{
-              fontFamily: "monospace",
-              fontSize: "0.78rem",
-              padding: "10px 20px",
-              border: btn.primary ? "1px solid #00ff41" : "1px solid #1f3a1f",
-              color: btn.primary ? "#0a0e0a" : "#00b32c",
-              background: btn.primary ? "#00ff41" : "transparent",
-              letterSpacing: "0.08em",
-              textDecoration: "none",
-              transition: "all 0.2s",
-              cursor: "pointer",
-            }}
-            onMouseEnter={(e) => {
-              if (!btn.primary) {
-                ;(e.currentTarget as HTMLElement).style.borderColor = "#00ff41"
-                ;(e.currentTarget as HTMLElement).style.color = "#00ff41"
-              }
-            }}
-            onMouseLeave={(e) => {
-              if (!btn.primary) {
-                ;(e.currentTarget as HTMLElement).style.borderColor = "#1f3a1f"
-                ;(e.currentTarget as HTMLElement).style.color = "#00b32c"
-              }
-            }}
-          >
-            {btn.label}
-          </a>
-        ))}
+        {buttons.map((btn) =>
+          btn.isRoute ? (
+            <Link
+              key={btn.label}
+              to={btn.href}
+              style={buttonStyle(btn.primary)}
+            >
+              {btn.label}
+            </Link>
+          ) : (
+            <a
+              key={btn.label}
+              href={btn.href}
+              style={buttonStyle(btn.primary)}
+            >
+              {btn.label}
+            </a>
+          )
+        )}
       </div>
 
       {/* Scroll hint */}

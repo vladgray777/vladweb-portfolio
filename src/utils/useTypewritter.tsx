@@ -12,7 +12,6 @@ export default function useTypewriter(lines: string[], speed = 40, lineDelay = 3
       setDone(true)
       return
     }
-    debugger
     const line = lines[currentLine]
     if (currentChar < line.length) {
       const t = setTimeout(
