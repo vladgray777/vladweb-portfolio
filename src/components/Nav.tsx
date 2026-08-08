@@ -1,5 +1,5 @@
 export default // ─── Nav ──────────────────────────────────────────────────────────────────────
-function Nav() {
+  function Nav() {
   const links = ["about", "projects", "skills", "contact"]
   return (
     <nav
@@ -18,15 +18,18 @@ function Nav() {
         }}
         className="text-glow"
       >
-        <span style={{ color: "#4a6a4a" }}>root@</span>
-        <span>portfolio</span>
-        <span style={{ color: "#4a6a4a" }}>:~#</span>
+        <a href="/">
+          <span style={{ color: "#4a6a4a" }}>root@</span>
+          <span>portfolio</span>
+          <span style={{ color: "#4a6a4a" }}>:~#</span>
+        </a>
+
       </div>
       <div className="flex gap-6">
         {links.map((l) => (
           <a
             key={l}
-            href={`#${l}`}
+            href={`/#${l}`}
             className="nav-link"
             style={{ fontSize: "0.78rem", letterSpacing: "0.08em" }}
           >

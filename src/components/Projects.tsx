@@ -134,9 +134,9 @@ export default function Projects() {
                   </span>
                 ))}
               </div>
-              <div style={{ fontSize: "0.65rem", color: "#2a4a2a" }}>
+              {/* <div style={{ fontSize: "0.65rem", color: "#2a4a2a" }}>
                 ★ {p.stars.toLocaleString()} stars
-              </div>
+              </div> */}
             </div>
           ))}
         </div>
