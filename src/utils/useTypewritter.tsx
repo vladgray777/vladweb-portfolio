@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 
 // ─── Typewriter hook ──────────────────────────────────────────────────────────
-export default function useTypewriter(lines: string[], speed = 40, lineDelay = 300) {
+export default function useTypewriter(lines: string[], speed = 100, lineDelay = 300) {
   const [displayed, setDisplayed] = useState<string[]>([])
   const [currentLine, setCurrentLine] = useState(0)
   const [currentChar, setCurrentChar] = useState(0)
