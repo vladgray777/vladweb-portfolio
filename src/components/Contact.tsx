@@ -48,10 +48,12 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="relative py-24 px-6 flex flex-col  items-center"
+      className="relative py-24 px-6 "
       style={{ zIndex: 1 }}
     >
-      <SectionHeader index="03" title="Contact" />
+      <div className="max-w-5xl mx-auto">
+        <SectionHeader index="03" title="Contact" />
+      </div>
 
       <div
         style={{
@@ -59,8 +61,9 @@ export default function Contact() {
           background: "#0d1117",
           padding: "32px",
         }}
-        className="terminal-glow w-[60%]"
+        className="terminal-glow max-w-5xl mx-auto"
       >
+
         <div
           style={{
             fontSize: "0.75rem",
