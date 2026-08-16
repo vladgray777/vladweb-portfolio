@@ -102,7 +102,7 @@ function Resume() {
 
           <div className="p-6 md:p-10">
             <p className="mb-2 font-mono text-sm text-green-500">
-              {"// SOFTWARE DEVELOPER + CYBERSECURITY SPECIALIST"}
+              {"// SOFTWARE DEVELOPER + CYBERSECURITY PRACTITIONER"}
             </p>
 
             <h1 className="text-4xl font-bold tracking-tight text-white md:text-6xl">
