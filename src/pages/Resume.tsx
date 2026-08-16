@@ -154,7 +154,7 @@ function Resume() {
               </a>
 
               <a
-                href="#contact"
+                href="/#contact"
                 className="flex items-center gap-2 border border-green-500/30 px-5 py-3 font-mono text-sm text-green-400 transition hover:border-green-400 hover:bg-green-500/10"
               >
                 CONTACT_ME
