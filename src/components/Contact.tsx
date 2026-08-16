@@ -123,7 +123,7 @@ export default function Contact() {
 
           {/* Email */}
           <div
-            className="flex items-center gap-3"
+            className="flex flex-col sm:flex-row sm:items-center gap-3"
             style={{ marginBottom: 16 }}
           >
             <span
@@ -156,7 +156,7 @@ export default function Contact() {
 
           {/* Message */}
           <div
-            className="flex items-center gap-3"
+            className="flex flex-col sm:flex-row sm:items-center gap-3"
             style={{ marginBottom: 16 }}
           >
             <span
@@ -174,6 +174,7 @@ export default function Contact() {
               name="message"
               required
               placeholder="send message..."
+              className="w-full min-w-0"
               style={{
                 flex: 1,
                 background: "transparent",
@@ -189,6 +190,7 @@ export default function Contact() {
             <button
               type="submit"
               disabled={sending}
+              className="w-full sm:w-auto"
               style={{
                 padding: "6px 14px",
                 border: "1px solid #00ff41",
@@ -243,7 +245,7 @@ export default function Contact() {
         )}
 
         <div
-          className="flex gap-6 mt-8"
+          className="flex flex-col sm:flex-row sm:items-center gap-3"
           style={{
             borderTop: "1px solid #1a2e1a",
             paddingTop: 20,

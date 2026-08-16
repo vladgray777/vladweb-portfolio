@@ -10,7 +10,7 @@ const skillGroups = [
       { name: "C#", level: 75 },
       { name: "Python", level: 72 },
       { name: "Java", level: 65 },
-      { name: "VB / VBS", level: 88 },
+      // { name: "VB / VBS", level: 88 },
     ],
   },
   {

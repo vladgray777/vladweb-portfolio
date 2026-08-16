@@ -34,6 +34,7 @@ export default // ─── Hero section ─────────────
   });
 
   return (
+    
     <section
       id="about"
       className="relative min-h-screen flex flex-col items-center justify-center px-6 pt-20 pb-12"

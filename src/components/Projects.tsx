@@ -26,14 +26,14 @@ const projects = [
     status: "WIP",
     stars: 0,
   },
-  {
-    id: "04",
-    name: "TASK_MANAGER",
-    desc: "Task management application with local storage persistence, completion tracking, item selection, deletion, and automatic organization of completed tasks.",
-    tags: ["React", "TypeScript", "LocalStorage", "CSS"],
-    status: "COMPLETED",
-    stars: 0,
-  },
+  // {
+  //   id: "04",
+  //   name: "TASK_MANAGER",
+  //   desc: "Task management application with local storage persistence, completion tracking, item selection, deletion, and automatic organization of completed tasks.",
+  //   tags: ["React", "TypeScript", "LocalStorage", "CSS"],
+  //   status: "COMPLETED",
+  //   stars: 0,
+  // },
 ]
 
 export default function Projects() {
