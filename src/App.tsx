@@ -6,13 +6,33 @@ import Skills from "./components/Skills"
 import Projects from "./components/Projects"
 import Contact from "./components/Contact"
 import ResumePage from "./pages/Resume"
-import { Route, Routes } from "react-router"
-
+import { Route, Routes, useLocation } from "react-router"
+import { useEffect } from "react"
 // ─── App ───
 export default function App() {
 
+  function ScrollToHash() {
+    const location = useLocation();
+
+    useEffect(() => {
+      if (location.hash) {
+        const element = document.getElementById(location.hash.substring(1));
+
+        if (element) {
+          element.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        }
+      }
+    }, [location]);
+
+    return null;
+  }
   const Home = () => {
 
+
+    ScrollToHash() 
     return (
       <>
         <MatrixRain />
@@ -28,13 +48,13 @@ export default function App() {
     )
   }
 
-    const Resume = () => {
+  const Resume = () => {
     return (
       <>
         <MatrixRain />
         <div style={{ position: "relative", zIndex: 1 }}>
           <Nav />
-          <ResumePage/>
+          <ResumePage />
           <Footer />
         </div>
       </>
