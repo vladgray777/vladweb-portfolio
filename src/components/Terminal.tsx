@@ -32,7 +32,7 @@ const terminalLines = [
 ]
 
 export default function Terminal() {
-  const { displayed, currentLine, done } = useTypewriter(terminalLines, 35, 180)
+  const { displayed, currentLine, done } = useTypewriter(terminalLines, 7.5, 180)
   const bodyRef = useRef<HTMLDivElement>(null)
   const bottomRef = useRef<HTMLDivElement>(null)
 

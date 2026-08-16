@@ -3,7 +3,9 @@ import {
   Download,
   ExternalLink,
   GraduationCap,
+  Mail,
   MapPin,
+  Phone,
   ShieldCheck,
   Terminal,
 } from "lucide-react";
@@ -76,8 +78,8 @@ function Resume() {
 
   const scrollToTop = () => {
     window.scrollTo({
-      top:0,
-      behavior:'smooth'
+      top: 0,
+      behavior: 'smooth'
     })
   }
   scrollToTop()
@@ -100,7 +102,7 @@ function Resume() {
 
           <div className="p-6 md:p-10">
             <p className="mb-2 font-mono text-sm text-green-500">
-              {"// SOFTWARE DEVELOPER + CYBERSECURITY"}
+              {"// SOFTWARE DEVELOPER + CYBERSECURITY SPECIALIST"}
             </p>
 
             <h1 className="text-4xl font-bold tracking-tight text-white md:text-6xl">
@@ -108,6 +110,18 @@ function Resume() {
               <br />
               KRUSHYNSKYI
             </h1>
+
+            <div className="mt-5 flex flex-wrap gap-x-6 gap-y-2 font-mono text-sm text-zinc-400">
+              <span className="flex items-center gap-2">
+                <Mail />
+                vladweb.contact@gmail.com
+              </span>
+
+              <span className="flex items-center gap-2">
+                <Phone />
+                +1 (774) 392-7210
+              </span>
+            </div>
 
             <div className="mt-5 flex flex-wrap gap-x-6 gap-y-2 font-mono text-sm text-zinc-400">
               <span className="flex items-center gap-2">
@@ -220,11 +234,10 @@ function Resume() {
               {experience.map((job, index) => (
                 <article
                   key={job.company}
-                  className={`relative ${
-                    index !== experience.length - 1
+                  className={`relative ${index !== experience.length - 1
                       ? "mb-10"
                       : ""
-                  }`}
+                    }`}
                 >
                   <span className="absolute -left-[33px] top-1.5 h-3 w-3 border border-green-400 bg-black" />
 
