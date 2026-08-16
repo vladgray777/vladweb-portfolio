@@ -15,7 +15,7 @@ export default function Footer() {
     >
        <div
       onClick={() => scrollToTop()}
-        className="cursor-blink mb-1"
+        className="cursor-blink mb-1 cursor-pointer"
         style={{ color: "#1f3a1f", fontSize: "0.7rem", letterSpacing: "0.2em" }}
       >
         ▲ Go Up
